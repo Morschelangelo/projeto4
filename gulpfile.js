@@ -8,21 +8,21 @@ const uglify = require('gulp-uglify');
 function scripts() {
     return gulp.src('./src/scripts/*.js')
         .pipe(uglify()) // Minifica os scripts
-        .pipe(gulp.dest('./dist/js')); // Salva os arquivos minificados no diretório de destino
+        .pipe(gulp.dest('./public/js')); // Salva os arquivos minificados no diretório de destino "public"
 }
 
 // Função para compilar Sass
 function styles() {
     return gulp.src('./src/styles/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError)) // Compila e comprime o Sass
-        .pipe(gulp.dest('./dist/css')); // Salva os arquivos compilados
+        .pipe(gulp.dest('./public/css')); // Salva os arquivos compilados no diretório "public"
 }
 
 // Função para otimizar imagens
 function images() {
     return gulp.src('./src/images/**/*')
         .pipe(imagemin()) // Otimiza as imagens
-        .pipe(gulp.dest('./dist/images')); // Salva as imagens otimizadas no diretório de destino
+        .pipe(gulp.dest('./public/images')); // Salva as imagens otimizadas no diretório "public"
 }
 
 // Comando de exportação padrão
