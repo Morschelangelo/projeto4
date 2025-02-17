@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "src/**/*.scss",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "src/images/**/*",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ]
+}
