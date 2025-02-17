@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --main-color: #FEF000;
+    --second-color: #282120;
+}
+section {
+    padding: 50px 10%;
+}
+*::selection{
+    color: #fff;
+    background: var(--main-color);
+}
+
+img {
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 4px 41px;    
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img {
+        width: 60px;
+    }
+
+.navbar{
+        display: flex;
+}
+.navbar a {
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #c9c9c9;
+    gap: 1rem;
+}
+.home-text{
+    flex: 1 1 17rem;
+}
+.home-img{
+    flex: 1 1 18rem;
+}
+
+.home-img img{
+animation: animate 3s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: translate(-10px, 0);
+    }
+    50% {
+        transform: translate(-0px, -10px);
+    }
+    100% {
+        transform: translate(-10px, 0);
+    }
+}
+.home-text span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.home-text h1 {
+    font-size: 3.2rem;
+    color: var(--main-color);
+    font-weight: bolder;
+}
+.home-text h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--second-color);
+    text-transform: uppercase;
+    margin: 0.5rem 0 1.4rem;
+}
+.heading{
+    text-align: center;
+}
+.heading span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.heading h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.sinopse-img{
+    flex: 1 1 21rem;
+}
+.sinopse-text{
+    flex: 1 1 21rem;
+}
+.sinopse-text h2{
+    font-size: 1.2rem;
+    color: var(--second-color);
+}
+deliver-text p {
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+.card-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+    align-items: center;
+    justify-content: center; 
+
+    > figure {
+        width: 200px;
+        height: 200px;
+        border-radius: 1rem;
+        overflow: hidden;
+        cursor: pointer;
+    }
+      figure > * {
+        grid-area: 1/1;
+        transition: .4s;
+    }
+    figure figcaption {
+        position:relative;
+        bottom:49px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #0000;
+        padding: .75rem;
+        background: var(--c,#0009);
+        clip-path: inset(0 var(--_i,100%) 0 0);
+        -webkit-mask:
+        linear-gradient(#000 0 0),
+        linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        -webkit-mask-clip: text, padding-box;
+
+    }
+    figure:hover figcaption{
+        --_i: 0%;
+    }
+    figure:hover img {
+        transform: scale(1.2);
+    }
+    @supports not (-webkit-mask-clip: text) {
+        figure figcaption {
+        -webkit-mask: none;
+        color: #fff;
+        }
+    }
+    
+}
+.container-episodes {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+  
+  .container-episodes::after {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+}
+  
+  .container-episodes iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.footer{
+    background:var(--second-color);
+    padding:15px 0px;
+    text-align:center;
+
+    .social-icon {
+        margin: 0 10px; /* Adicione margens direita e esquerda para afastar os ícones */
+        color: #ffffff;
+    }
+
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:var(--main-color);
+    font-size:0.8em;
+    }
+
+
+    @media screen and (max-width: 768px) { /* ajuste para dispositivos com largura até 768px */
+        
+    .home-text {
+        margin-top: 40px; /* ajuste o valor conforme necessário */
+    }
+    header {
+        padding: 11px 4%;
+    }
+    #menu-icon {
+        display: initial;
+    }
+
+    header .navbar {
+        
+        position: absolute;
+        /* Assim fica abaixo do menu, senao podemos abrir no topo do menu mudando pra 0 */
+        top: 100%; 
+        left: 0;
+        right: 0;
+        display: none; 
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 0 4px 4px rgba(14, 55, 54, 0.14);
+        /* caso queira remover a "linha" borda superior */
+        border-top: 2px solid var(--main-color);
+        transition: 0.2s;
+        text-align: left;
+    }
+    /* Menu aparece quando recebe a classe "active" */
+    header .navbar.active {
+        display: flex; 
+    }
+    
+    
+    header .navbar a {
+        padding: 0.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+
+    .home {
+        
+            width: 100%;
+            min-height: 50vh;
+    }
+    .home-text span {
+        font-size: 0.9rem;
+    }
+
+    .home-text h1 {
+        font-size: 2.4rem;
+    }
+
+    
+    .home-text h2 {
+        font-size: 1.2rem;
+    }
+
+    figure figcaption {
+        --_i: 0%;
+    }
+} 
